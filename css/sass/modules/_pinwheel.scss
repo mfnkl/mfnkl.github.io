@@ -1,0 +1,70 @@
+@mixin rotate($deg) {
+	-webkit-transform: rotate(#{$deg}deg);
+	    -ms-transform: rotate(#{$deg}deg);
+	        transform: rotate(#{$deg}deg);
+}
+
+@mixin angle-color($hex) {
+	.angle {
+		border-left-color: $hex;
+
+		&.shadow {
+			border-left-color: darken($hex, 10%);
+		}
+	}
+}
+
+.pinwheel {
+	padding: 100px;
+	margin: 60px;
+	float: right;
+	-webkit-transform: rotate(-22deg);
+	-webkit-transition: -webkit-transform 2s;
+	        transition: transform 2s;
+
+	&:hover {
+		@include rotate(540);
+	}
+
+	li {
+		position: relative;
+	}
+
+	.angle {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border: 50px solid transparent;
+		border-right: none;
+	}
+
+	.shadow {
+		border-width: 35px;
+		top: 52px;
+		left: 20px;
+		@include rotate(45);
+	}
+
+	.one {
+		top: -99px;
+		@include angle-color(#8b7fb1);
+	}
+
+	.two {
+		left: 99px;
+		@include rotate(90);
+		@include angle-color(#5f9dcc);
+	}
+
+	.three {
+		top: 99px;
+		@include rotate(180);
+		@include angle-color(#e3597d);
+	}
+
+	.four {
+		left: -99px;
+		@include rotate(270);
+		@include angle-color(#c3cdc4);
+	}
+}

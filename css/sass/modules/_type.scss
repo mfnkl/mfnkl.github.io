@@ -1,0 +1,49 @@
+body {
+	font-family: 'Karla', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.5;
+	color: #232323;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	margin: 36px 0 6px;
+}
+
+h3 {
+	font-size: 1.16em;
+}
+
+a {
+	color: #232323;
+
+	&:hover {
+		color: #232323;
+		background: #c4cec5;
+		text-decoration: none;
+	}
+}
+
+h3 a {
+	text-decoration: none;
+	color: #dd3f26;
+}
+
+.currently span {
+	color: #dd3f26;
+}
+
+footer {
+	font-size: .8em;
+}
